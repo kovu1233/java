@@ -8,24 +8,26 @@
 <title>JAVA</title>
 <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
 
-<script type="text/javascript" src="js/iscroll.js"></script>
-
+<script type="text/javascript" src="js/iscroll5.js"></script>
 <script type="text/javascript">
 
 var myScroll;
-function loaded() {
-	myScroll = new iScroll('wrapper', { zoom:true });
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', { mouseWheel: true, click: true, zoom: true });
 }
 
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
-document.addEventListener('DOMContentLoaded', loaded, false);
+
+//var windowWidth = window.innerWidth;
+//var windowHeight = window.innerHeight;
 
 </script>
 
 </head>
 
-<body>
+<body onLoad="loaded()">
 
 <div id="header">Examples</div>
 <div id="wrapper">

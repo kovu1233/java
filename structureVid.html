@@ -1,12 +1,16 @@
 <!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <link rel="shortcut icon" href="favicon.ico">
         <title>JAVA</title>
+        
+        <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
         <meta http-equiv="x-ua-compatible" content="IE=edge" />
-        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-touch-fullscreen" content="yes">
         <link rel="stylesheet" type="text/css" href="css/snap.css" />
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         
@@ -77,18 +81,50 @@ iframe {
 	float: left;
 }
 
+a:link {
+    text-decoration: none;
+	color: white;
+}
+
+a:visited {
+    text-decoration: none;
+		color: white;
+}
+
+a:active {
+    text-decoration: underline;
+	color: white;
+}
+
 </style>
+    
+    <script type="text/javascript" src="js/iscroll.js"></script>
+
+<script type="text/javascript">
+
+var myScroll;
+function loaded() {
+	myScroll = new iScroll('wrapper', { zoom:true });
+}
+
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+
+</script>
         
     </head>
     <body>
     
         <div class="snap-drawers">
             <div class="snap-drawer snap-drawer-left" align="center">
-              <div>
-                    <h3>More Videos</h3>                        
-                <h4><u>VIDEOS</u></h4>
+              <div>                        
+                <h4><u>Contents</u></h4>
                   <ul>
-                  <img src="images/spaceBlack.png" width="44" height="44" alt="vid1" style="margin-right:25px;"><br>No Video</li>
+                  <a href="structure.html">
+                  <li id="rev" style="background-color: #555;">
+              <img src="images/structure.png" width="44" height="100" alt="vid1"><br><b>Review</b>
+                  	</li></a>
                   </ul>
                 </div>
             </div>
@@ -96,25 +132,23 @@ iframe {
         </div>
         <div id="content" class="snap-content">
             <div id="toolbar">
-           	  <div id="header">Structure</div>
-            	<div id="open-left">DRAG FOR MORE</div>     
-          </div>
-          	<iframe src="http://www.youtube.com/embed/EI8Q8ZQttgc">
-	</iframe>
-          
+           	  <div id="header">Structures</div>
+            	<div id="open-left" style="z-index:10; position: fixed; right: 0.9%;">DRAG FOR REVIEW</div>     
+            		</div>    
+<!--<iframe style="width:90%; height:75%; margin-left:25%;" src="images/variables.png"></iframe>
+    -->
+<object data="http://www.youtube.com/embed/EI8Q8ZQttgc" width="95%" height="80%" style="margin-top:45px;" id="contchgr"></object>
         </div>
-            
-        <script type="text/javascript" src="js/snap.js"></script>
+           
+<script type="text/javascript" src="js/snap.js"></script>
         <script type="text/javascript">
             var snapper = new Snap({
                 element: document.getElementById('content'),
 				disable: 'left'
             });
-			
-            
+        	    
         </script>
         
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         <div id="footer"><a href="structure.html"><img class="backLogo" src="images/backbtn.png"></a><img class="slikkeLogo" src="images/slikke logo.png"></div>
 
     </body>
